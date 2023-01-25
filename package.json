@@ -2,6 +2,7 @@
   "name": "authenticacion",
   "version": "0.1.0",
   "private": true,
+  "homepage": "",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,5 +19,8 @@
     "next-i18next": "^13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
