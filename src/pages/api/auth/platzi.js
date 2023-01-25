@@ -8,8 +8,8 @@ const credentialsAuth = (request, response) => {
   
   if(request.body.password === process.env.AUTH_PLATZI_SECRET){
     const platziUser = {
-      name: "Platzi Student",
-      email: "student@platzi.com",
+      name: "Jose Luis Castañeda",
+      email: "Castaneda@auth.com",
       image: ""
     }
     return response.status(200).json(platziUser)
