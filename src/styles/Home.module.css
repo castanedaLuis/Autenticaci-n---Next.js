@@ -289,6 +289,34 @@
   background-color: aqua;
 }
 
+
+.contenedorPremium{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.imgPremium{
+  min-width: 233px;
+  max-width: 233px;
+  width: 233px;
+  min-height: 233px;
+  max-height: 233px;
+  height: 233px;
+}
+
+.tituloPremium{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.tituloPremium span{
+  color: azure;
+}
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {

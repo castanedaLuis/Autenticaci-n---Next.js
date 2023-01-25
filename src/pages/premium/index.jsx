@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
-import Image from 'next/image';
 import { useSession, getSession } from "next-auth/react";
+import styles from '@/styles/Home.module.css'
 
 export const getServerSideProps = async (context) => {
   //validar sesión
@@ -30,13 +30,13 @@ function index() {
   }
 
   if (session == null) {
-    return <>
+    return <div className={styles.contenedorPremium}>
       <h1>Acceso Denegado ❌</h1>
       <p>You must be logged in to view this page.</p>
       <Link href={'/api/auth/Signin'}>
         <button>Login</button>
       </Link>
-    </>
+    </div>
   }
 
   useEffect(() => {
@@ -46,13 +46,13 @@ function index() {
   }, [])
 
   return (
-    <div className='contenedor'>
-      <h1>{`Bienvenido ${session.user?.name}`}</h1>
+    <div className={styles.contenedorPremium}>
+      <h1 className={styles.tituloPremium}>{`Bienvenido `}<span>{session.user?.name}</span></h1>
       <div>
         {
           image === null ? null : (
             <img
-              className='img-premium'
+              className={styles.imgPremium}
               src={image}
               alt={image}
             />
