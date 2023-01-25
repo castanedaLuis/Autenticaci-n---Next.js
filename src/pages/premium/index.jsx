@@ -21,9 +21,17 @@ export const getServerSideProps = async (context) => {
   }
 }
 
-function index() {
+function Index() {
   const [image, setImage] = useState()
   const { data: session, status } = useSession();
+
+  
+  useEffect(() => {
+    fetch('/api/premium')
+      .then(response => response.json())
+      .then(({ data }) => setImage(data))
+  },[])
+
 
   if (status === 'loading') {
     return null
@@ -39,11 +47,7 @@ function index() {
     </div>
   }
 
-  useEffect(() => {
-    fetch('/api/premium')
-      .then(response => response.json())
-      .then(({ data }) => setImage(data))
-  }, [])
+
 
   return (
     <div className={styles.contenedorPremium}>
@@ -64,4 +68,4 @@ function index() {
   )
 }
 
-export default index
+export default Index
