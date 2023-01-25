@@ -43,16 +43,19 @@ export default function Home() {
 
         <div className={styles.grid}>
           <div className={styles.card}>
-            <Link href={'/api/auth/signin'} legacyBehavior>
+            <Link href={'/premium'} legacyBehavior>
               <a aria-label='Ir a iniciar sesión'>
                 <h2 className={inter.className}>
-                  Inicia Sesión <span>-&gt;</span>
+                  Pagina Premium <span>-&gt;</span>
                 </h2>
                 <p className={inter.className}>
                   Para utilizar la funcionalidad de next-auth
                   que nos provee una excelente forma de autenticar a
                   nuestros usuarios, como por ejemplo delegar la autenticación
-                  a otros provedores
+                  a otros provedores.
+                  Nos ayuda tambien a manejar nuestras paginas protegidas,
+                  rutas protegidas, como en este caso.... 
+                  <strong>Rutas: <span>/premium</span></strong>
                 </p>
               </a>
             </Link>
