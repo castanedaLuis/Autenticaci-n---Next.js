@@ -25,7 +25,7 @@ function Index() {
   const [image, setImage] = useState()
   const { data: session, status } = useSession();
 
-  
+
   useEffect(() => {
     fetch('/api/premium')
       .then(response => response.json())
@@ -50,7 +50,7 @@ function Index() {
 
 
   return (
-    <div className={styles.contenedorPremium}>
+    <div  className={styles.contenedorPremium}>
       <h1 className={styles.tituloPremium}>{`Bienvenido `}<span>{session.user?.name}</span></h1>
       <div>
         {
