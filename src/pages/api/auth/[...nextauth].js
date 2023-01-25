@@ -16,7 +16,7 @@ const options = {
 
       credentials: {
         userName:{label:"userName" , type:"text"},
-        password: {  label: "Password", type: "password" }
+        password: {  label: 'Nunca pares de...', type: "password" }
       },
       async authorize(credentials, req) {
         const res = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/platzi`,{

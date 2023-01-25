@@ -20,9 +20,11 @@ function LoginLogout() {
       </div>
     )
   }
+
   return (
     <div className={styles.contenedorHeader}>
       <div className={styles.contenedorUser}>
+        <img className={styles.imgAvatar} src={session.user?.image || 'userAvatar.png'} alt='Avatar'/>
         <span className={styles.spanNameUser}>{session.user?.name}</span>
         <button className={styles.buttonSession} onClick={() => signOut()} >  {t('SignOut')} </button>
       </div>
