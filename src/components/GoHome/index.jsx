@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import styles from '@/styles/Home.module.css'
 
 function index() {
   return (
     <>
         <Link href={'/'}>
-                <button>Ir al Home</button>
+                <button className={styles.buttonSession}>Ir al Home</button>
         </Link>
     </>
   )
