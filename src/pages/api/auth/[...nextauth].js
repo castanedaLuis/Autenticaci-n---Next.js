@@ -15,6 +15,7 @@ const options = {
       name: 'Credentials',
 
       credentials: {
+        userName:{label:"userName" , type:"text"},
         password: {  label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
